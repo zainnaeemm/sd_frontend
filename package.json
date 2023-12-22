@@ -1,0 +1,14 @@
+{
+  "name": "modern-portfolio",
+  "version": "1.0.0",
+  "description": "Responisve portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zain Naeem",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
