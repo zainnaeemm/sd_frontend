@@ -14,4 +14,24 @@
     background: #fff;
     @include easeOut;
   }
+
+  //Change menu lines to X while rotating them
+  &.close {
+    transform: rotate(180deg);
+
+    .btn-line {
+      //first line (rotate to make X)
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+      }
+    }
+  }
 }
