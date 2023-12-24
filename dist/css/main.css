@@ -169,8 +169,8 @@ main {
   .about-info .bio-image {
     grid-area: bioimage;
     margin: auto;
-    border-radius: 50%;
-    border: #0c70aa 3px solid; }
+    border: #0c70aa 3px solid;
+    border-radius: 50%; }
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem; }
@@ -185,6 +185,51 @@ main {
     padding: 0.5rem;
     border-bottom: #0c70aa 5px solid; }
 
+.projects {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(3, 1fr); }
+  .projects img {
+    width: 100%;
+    border: 3px #000 solid; }
+    .projects img:hover {
+      opacity: 0.5;
+      border-color: #0c70aa;
+      transition: all 0.5s ease-out; }
+
+.contact-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 0.5rem; }
+  .contact-boxes div {
+    font-size: 2rem;
+    border: 5px #000 solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    transition: all 0.5s ease-out; }
+    .contact-boxes div:hover {
+      padding: 0.5rem 1.5rem;
+      background: black;
+      border: 5px #fff solid; }
+
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    background: #0c70aa; }
+
+.btn-dark {
+  background: black;
+  color: #fff; }
+
+.btn-light {
+  background: #c4c4c4;
+  color: #000; }
+
 #main-footer {
   text-align: center;
   padding: 1.2rem;
@@ -194,7 +239,7 @@ main {
 
 @media screen and (min-width: 1171px) {
   .projects {
-    grid-template-columns: repeat(4, 1fr); } }
+    grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
