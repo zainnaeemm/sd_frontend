@@ -1,5 +1,6 @@
 @import "config";
 @import "menu";
+@import "mobile";
 * {
   box-sizing: border-box;
 }
@@ -22,14 +23,15 @@ h3 {
   font-weight: 500;
 
   &.lg-heading {
-    font-size: 4rem;
+    font-size: 5rem;
+    padding-left: 1rem;
   }
 
   &.small-heading {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 2rem;
     padding: 0.1rem 1rem;
-    background: rgba(lighten($primary-color, 1), 0.5);
+    background: rgba(lighten($primary-color, 1), 0.2);
   }
 }
 

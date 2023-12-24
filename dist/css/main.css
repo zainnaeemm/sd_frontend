@@ -24,7 +24,6 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.8;
   visibility: hidden; }
   .menu.show {
     visibility: visible; }
@@ -40,32 +39,31 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #373737;
+    background: rgba(55, 55, 55, 0.9);
     list-style: none;
     transform: translate3d(100%, 0, 0);
     transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #444;
+    background: rgba(68, 68, 68, 0.9);
     transform: translate3d(-100%, 0, 0);
     transition: all 0.5s ease-out; }
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
     .menu-branding .portrait {
-      width: 250px;
+      width: 198px;
       height: 250px;
-      background: url("../img/portrait2.jpg");
+      background: url("../img/portrait.jpg");
       border-radius: 50%;
-      border: solid 3px #eece1a;
-      opacity: 1; }
+      border: solid 3px #0c70aa; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.5s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #eece1a; }
+      color: #0c70aa; }
   .menu .nav-link {
     text-align: center;
     display: inline-block;
@@ -79,7 +77,7 @@
     opacity: 1;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
-      color: #eece1a; }
+      color: #0c70aa; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -92,6 +90,57 @@
 
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
+
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu-branding .portrait {
+      background: url("../img/portrait_small.jpg");
+      width: 150px;
+      height: 170px; }
+  .about-info {
+    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
+    grid-template-columns: 1fr; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media screen and (max-width: 500px) {
+  main {
+    padding: 2rem; }
+    main #home h1 {
+      margin-top: 10vh; }
+    main .lg-heading {
+      margin-top: 1rem;
+      font-size: 5rem; }
+  .projects {
+    grid-template-columns: 1fr; } }
 
 * {
   box-sizing: border-box; }
@@ -125,14 +174,15 @@ h3 {
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    font-size: 4rem; }
+    font-size: 5rem;
+    padding-left: 1rem; }
   h1.small-heading,
   h2.small-heading,
   h3.small-heading {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 2rem;
     padding: 0.1rem 1rem;
-    background: rgba(71, 71, 71, 0.5); }
+    background: rgba(71, 71, 71, 0.2); }
 
 a {
   color: #fff;
@@ -144,7 +194,7 @@ header {
   width: 100%; }
 
 .secondary-text {
-  color: #eece1a; }
+  color: #0c70aa; }
 
 main {
   padding: 4rem;
@@ -154,7 +204,7 @@ main {
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
-        color: #eece1a;
+        color: #0c70aa;
         transition: all 0.5s ease-out; }
   main#home {
     overflow: hidden; }
