@@ -31,3 +31,25 @@ function toggleMenu() {
         showMenu = false;
     }
 }
+
+var slideIndex = 0;
+  carousel();
+
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+      x[i].classList.remove("fade-in");
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "block";
+    setTimeout(function () {
+      x[slideIndex-1].classList.add("fade-in");
+    }, 1); // Add a slight delay for the fade-in effect
+    setTimeout(function () {
+      x[slideIndex-1].classList.remove("fade-in");
+      carousel();
+    }, 2000); // Change image every 2 seconds
+  }
