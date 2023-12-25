@@ -1,5 +1,6 @@
 # Prerequisites
 ## Installing packages
+Make sure to have Node.js and npm installed. After cloning the repository, go to the project directory in the terminal and run the following command:
 ```bash
   npm i 
 ``` 
